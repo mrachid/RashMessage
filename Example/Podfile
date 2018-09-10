@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'RashMessage_Example' do
+  pod 'RashMessage', :path => '../'
+
+  target 'RashMessage_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
