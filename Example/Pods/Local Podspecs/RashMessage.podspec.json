@@ -1,0 +1,22 @@
+{
+  "name": "RashMessage",
+  "version": "0.1.0",
+  "summary": "A short description of RashMessage.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/mrachid/RashMessage",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "mrachid": "mrachid@adneom.com"
+  },
+  "source": {
+    "git": "https://github.com/mrachid/RashMessage.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "RashMessage/Classes/**/*"
+}

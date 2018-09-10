@@ -1,0 +1,16 @@
+PODS:
+  - RashMessage (0.1.0)
+
+DEPENDENCIES:
+  - RashMessage (from `../`)
+
+EXTERNAL SOURCES:
+  RashMessage:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  RashMessage: bea8520201f84c048196e2f777e5c8d25c77829c
+
+PODFILE CHECKSUM: a7c90ffc6f58585e9f0602bdc920f2335cddcd2c
+
+COCOAPODS: 1.5.0

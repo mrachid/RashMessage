@@ -1,0 +1,6 @@
+framework module RashMessage {
+  umbrella header "RashMessage-umbrella.h"
+
+  export *
+  module * { export * }
+}

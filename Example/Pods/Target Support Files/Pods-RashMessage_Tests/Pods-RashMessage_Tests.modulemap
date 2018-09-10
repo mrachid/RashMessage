@@ -1,0 +1,6 @@
+framework module Pods_RashMessage_Tests {
+  umbrella header "Pods-RashMessage_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

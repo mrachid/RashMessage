@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		3CE5A651D06E36B8662D4CEE /* Pods-RashMessage_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RashMessage_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-RashMessage_Example/Pods-RashMessage_Example.release.xcconfig"; sourceTree = "<group>"; };
-		441869F2A00A8817A7C76E99 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		441869F2A00A8817A7C76E99 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4ACF50D6D9FF8840ABBEE472 /* Pods_RashMessage_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RashMessage_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* RashMessage_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RashMessage_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,8 +43,8 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7B959FF67F12802919166B35 /* Pods_RashMessage_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RashMessage_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		840A8F738E37A91D31FB8E49 /* Pods-RashMessage_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RashMessage_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RashMessage_Tests/Pods-RashMessage_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		AF2A47CD9F2726D3902596EB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		B3C07E495D86945B62CC2C46 /* RashMessage.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = RashMessage.podspec; path = ../RashMessage.podspec; sourceTree = "<group>"; };
+		AF2A47CD9F2726D3902596EB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B3C07E495D86945B62CC2C46 /* RashMessage.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RashMessage.podspec; path = ../RashMessage.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C9C4B2369EED4F3AAAB83E93 /* Pods-RashMessage_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RashMessage_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RashMessage_Example/Pods-RashMessage_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F0024F5874F81F71C5E1DECB /* Pods-RashMessage_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RashMessage_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RashMessage_Tests/Pods-RashMessage_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
