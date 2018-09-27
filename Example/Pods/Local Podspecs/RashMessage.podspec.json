@@ -1,7 +1,7 @@
 {
   "name": "RashMessage",
   "version": "0.1.0",
-  "summary": "A short description of RashMessage.",
+  "summary": "RashMessage - Chat Message UI",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/mrachid/RashMessage",
   "license": {
@@ -16,7 +16,16 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "11.0"
   },
-  "source_files": "RashMessage/Classes/**/*"
+  "source_files": [
+    "RashMessage/Classes/**/*",
+    "RashMessage/Classes/**/*.swift"
+  ],
+  "resource_bundles": {
+    "RashMessageAssets": [
+      "RashMessage/Assets/ImageAsset/*.png",
+      "RashMessage/Assets/ImageAsset/*.pdf"
+    ]
+  }
 }
