@@ -15,8 +15,38 @@ open class MessageViewController: UIViewController, UITableViewDelegate, UITable
         }
     }
     
-    public var chatMessages: [[ChatMessage]] = [[]]
     
+    
+    public var messages = [ChatMessage]() {
+        didSet {
+            parseMessageIntoSection()
+        }
+    }
+//        ChatMessage(id: 15, text: "Last Message 4", from: nil, avatar: nil, createdAt: Date().addingTimeInterval(172806), isIncomming: true),
+//        ChatMessage(id: 7, text: "Message 1", from: nil, avatar: nil, createdAt: Date(), isIncomming: false),
+//        ChatMessage(id: 8, text: "Last Message 1", from: nil, avatar: nil, createdAt: Date().addingTimeInterval(172800), isIncomming: false),
+//        ChatMessage(id: 9, text: "Message 2", from: nil, avatar: nil, createdAt: Date(), isIncomming: false),
+//        ChatMessage(id: 10, text: "New Message 1", from: nil, avatar: nil, createdAt: Date().addingTimeInterval(86400), isIncomming: true),
+//        ChatMessage(id: 11, text: "New Message 2", from: nil, avatar: nil, createdAt: Date().addingTimeInterval(86400), isIncomming: true),
+//        ChatMessage(id: 12, text: "New Message 3", from: nil, avatar: nil, createdAt: Date().addingTimeInterval(86400), isIncomming: true),
+//        ChatMessage(id: 13, text: "Last Message 2", from: nil, avatar: nil, createdAt: Date().addingTimeInterval(172801), isIncomming: true),
+//        ChatMessage(id: 14, text: "Message 3", from: nil, avatar: nil, createdAt: Date(), isIncomming: true),
+//        ChatMessage(id: 15, text: "New Message 4", from: nil, avatar: nil, createdAt: Date().addingTimeInterval(86401), isIncomming: true),
+//        ChatMessage(id: 15, text: "Last Message 3", from: nil, avatar: nil, createdAt: Date().addingTimeInterval(172801), isIncomming: true),
+//    ]
+    
+//    public var chatMessages: [[ChatMessage]] = [[]] {
+//        didSet {
+//            messageTableView.reloadData()
+//        }
+//    }
+
+    public var chatMessages: [[ChatMessage]] = [[]] {
+        didSet {
+//            messageTableView.reloadData()
+        }
+    }
+
     private let cellId = "messageCell"
     private var oldMessageIsIncommingChange: Bool?
     private var displayDateMessage = false
@@ -198,7 +228,57 @@ open class MessageViewController: UIViewController, UITableViewDelegate, UITable
             }
         }
     }
+    
+    public func newMessage(message: ChatMessage) {
+        //        Aymeric Caron
+
+        let lastIndexGroup = chatMessages.count - 1
+        if DateHelper.dateShortFormater.string(from: (chatMessages[lastIndexGroup].first?.createdAt)!) == DateHelper.dateShortFormater.string(from: message.createdAt) {
+            chatMessages[lastIndexGroup].append(message)
+        } else {
+            chatMessages.append([message])
+        }
+        messageTableView.reloadData()
+        
+        let nbrSection = self.chatMessages.count - 1
+        let lastMessage = self.chatMessages[nbrSection].count - 1
+        let index = IndexPath(item: lastMessage, section: nbrSection)
+        self.messageTableView.scrollToRow(at: index, at: .bottom, animated: false)
+
+    }
+    
+    
+    
+    private func parseMessageIntoSection() {
+        
+        let messagesSorted = messages.sorted { (msg1, msg2) -> Bool in
+            return msg1.createdAt < msg2.createdAt
+        }
+        
+        var groupResult:[String: [ChatMessage]] = [:]
+        
+        for message in messagesSorted {
+            let date = DateHelper.dateShortFormater.string(from: message.createdAt)
+            if groupResult[date] != nil {
+                groupResult[date]!.append(message)
+            } else {
+                groupResult[date] = [message]
+            }
+        }
+        
+        let finalResult = groupResult.sorted { (arg0, arg1) -> Bool in
+            return arg0.key < arg1.key
+        }
+        
+        var all: [[ChatMessage]] = []
+        for group in finalResult {
+            all.append(group.value)
+        }
+        
+        chatMessages = all
+    }
 }
+
 
 
 extension MessageViewController {
@@ -298,7 +378,7 @@ extension MessageViewController {
     
 //    public func scrollToBottom(animated: Bool = false) {
 //        let collectionViewContentHeight = messageTableView.contentSize.height//collectionViewLayout.collectionViewContentSize.height
-//        
+//
 //        performBatchUpdates(nil) { _ in
 //            self.scrollRectToVisible(CGRect(0.0, collectionViewContentHeight - 1.0, 1.0, 1.0), animated: animated)
 //        }
@@ -306,5 +386,7 @@ extension MessageViewController {
 }
 
 public protocol MessageDelegate {
-    func sendMessage()
+    func didSuccessAddMessage()
+//    func didFailAddMessage()
 }
+

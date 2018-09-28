@@ -13,7 +13,7 @@ class MessageTableViewCell: UITableViewCell {
     let messageLabel = UILabel()
     let messageDateLabel = UILabel()
     let bubbleBackgroundView = UIView()
-    let errorSend = UIImageView()
+    let errorSend = UIButton()
     var config: MessageConfiguration!
 
     var leadingConstraintMessageLabel: NSLayoutConstraint!
@@ -33,13 +33,14 @@ class MessageTableViewCell: UITableViewCell {
             bubbleBackgroundView.layer.borderWidth = 1
             messageLabel.textColor = chatMessage.isIncomming ? config.messageTextColorIsComming : config.messageTextColorIsNotComming
             messageLabel.text = chatMessage.text
-            messageDateLabel.text = "Vu"
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "E, d MMM"
+            let dateString = dateFormatter.string(from: chatMessage.createdAt)
+            messageDateLabel.text = dateString
             messageDateLabel.textColor = config.messageTextDateColor
             messageDateLabel.font = UIFont.systemFont(ofSize: 12)
             backgroundColor = .clear
             bubbleBackgroundView.layer.cornerRadius = 16
-            
-            errorSend.backgroundColor = .red
             
             if chatMessage.isIncomming {
                 leadingConstraintMessageLabel.isActive = true
@@ -89,7 +90,7 @@ class MessageTableViewCell: UITableViewCell {
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
         messageDateLabel.translatesAutoresizingMaskIntoConstraints = false
         errorSend.translatesAutoresizingMaskIntoConstraints = false
-        errorSend.image = ImagesHelper.loadImage(name: "send")
+        errorSend.setImage(ImagesHelper.loadImage(name: "exclamation"), for: .normal)
         
         addSubview(bubbleBackgroundView)
         addSubview(messageLabel)

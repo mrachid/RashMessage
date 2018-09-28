@@ -22,7 +22,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="WkX-rp-N0b"/>
+                    <navigationItem key="navigationItem" id="WkX-rp-N0b">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="W4S-8I-LgH">
+                            <connections>
+                                <action selector="addMessageTest:" destination="vXZ-lx-hvc" id="BGw-s2-ssd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

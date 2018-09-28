@@ -14,3 +14,15 @@ public extension Date {
         return dateFormatter.date(from: customString) ?? Date()
     }
 }
+
+
+class DateHelper {
+    
+    //32/10/2017
+    static let dateShortFormater: DateFormatter = {
+        let dateFormater = DateFormatter()
+        dateFormater.setLocalizedDateFormatFromTemplate("dd/MM/yyyy")
+        
+        return dateFormater
+    }()
+}
