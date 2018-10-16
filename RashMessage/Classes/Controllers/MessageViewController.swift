@@ -286,6 +286,10 @@ open class MessageViewController: UIViewController, UITableViewDelegate, UITable
 
 extension MessageViewController {
     
+    public func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
     public func numberOfSections(in tableView: UITableView) -> Int {
         return chatMessages.count
     }
@@ -353,12 +357,12 @@ extension MessageViewController {
         
         if nextMessage != nil {
             if message.isIncomming == nextMessage!.isIncomming {
-                cell.configureUI(valueBottomConstant: -20, displayDate: dateIsDisplayed.contains(indexPath))
+                cell.configureUI(valueBottomConstant: -35, displayDate: dateIsDisplayed.contains(indexPath))
             } else {
-                cell.configureUI(valueBottomConstant: -42, displayDate: dateIsDisplayed.contains(indexPath))
+                cell.configureUI(valueBottomConstant: -50, displayDate: dateIsDisplayed.contains(indexPath))
             }
         } else {
-            cell.configureUI(valueBottomConstant: -42, displayDate: dateIsDisplayed.contains(indexPath))
+            cell.configureUI(valueBottomConstant: -50, displayDate: dateIsDisplayed.contains(indexPath))
         }
         cell.config = config
         cell.chatMessage = message

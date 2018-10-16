@@ -11,12 +11,6 @@ import RashMessage
 
 class ViewController: MessageViewController {
     
-    let titi = [
-        ChatMessage(id: 1, text: "NON 1", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "16/08/2018"), isIncomming: true),
-        ChatMessage(id: 1, text: "NON 2", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "16/08/2018"), isIncomming: true),
-        ChatMessage(id: 1, text: "NON 3", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "16/08/2018"), isIncomming: true),
-        ChatMessage(id: 1, text: "NON 4", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "16/08/2018"), isIncomming: true),
-    ]
     let toto = [
         ChatMessage(id: 1, text: "Ceci est mon premier message", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "13/08/2018"), isIncomming: true),
         ChatMessage(id: 2, text: "Ceci est mon second message, et je vais ecrire beaucoup plus de chose afin de voir le nombre de ligne affiché", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "13/08/2018"), isIncomming: false),
@@ -25,19 +19,19 @@ class ViewController: MessageViewController {
         ChatMessage(id: 5, text: "Message qui doit s'afficher sur le coté gauche du chat avec un fond blanc", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "14/08/2018"), isIncomming: true),
         ChatMessage(id: 6, text: "Troisieme section de message", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "15/08/2018"), isIncomming: false),
         ChatMessage(id: 7, text: "Voici le premier message ecrit dans la 4eme section", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "16/08/2018"), isIncomming: false),
-        ChatMessage(id: 8, text: "Bienvenue à l'équipe de charlatan", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "16/08/2018"), isIncomming: false),
-        ChatMessage(id: 9, text: "Je vous souhaite d'heureuse fete et plein de bonne chose et oui j'écrit des choses qui on un sens pour des test mouahahhaa!!!!!!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "16/08/2018"), isIncomming: false),
-        ChatMessage(id: 10, text: "Mouaiiis..sdfsdfsdf..!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: true),
-        ChatMessage(id: 10, text: "fdsfdsfdsf....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: true),
-        ChatMessage(id: 10, text: "Mouaiiissdfsdfsdfdsfdsfdsfdsf....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: true),
-        ChatMessage(id: 10, text: "fmldsjfldsjflkjsdnflkjdsnflkjdsnflkjndslfkjdslkjfbndslkjhf....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: true),
-        ChatMessage(id: 10, text: "sfdlmnsdf....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: true),
-        ChatMessage(id: 10, text: "mslfjmlksdjfmsdjfmlkdsjflmkds....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: true),
-        ChatMessage(id: 10, text: "Mouasdmfklndsmlkfjsdmlkfjmsdljfmldskjfmldsjfmlsdjfmlkdsjfmldsjfmlsdjfsdffjmsdfjiiis....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "16/08/2018"), isIncomming: true),
-        ChatMessage(id: 10, text: "fdsfdsfdsfdsfdsfsdfsdfldshjflsdjhfkjsdhflkjshdflkqsdhflksdhflkqsjhfl....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: false),
-        ChatMessage(id: 10, text: "dfslkjlsdkjfkldsjfkldsjfkljdsklfjds....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: false),
-        ChatMessage(id: 10, text: "Modsfdslkfdslkfjdskfjkldsjfklsdjflkjdslkfjdslkfjlksdnfljksdnfljksdnflksdjflkjsdfuaiiis....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: false),
-        ChatMessage(id: 10, text: "sdlkfjlsdkfjsdlkfjsdlkfjsd....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "18/08/2018"), isIncomming: false),
+        ChatMessage(id: 8, text: "Bienvenue à l'équipe de charlatan", from: nil, avatar: nil, createdAt: Date()/*Date.dateFromCustomString(customString: "16/08/2018")*/, isIncomming: false),
+        ChatMessage(id: 9, text: "Je vous souhaite d'heureuse fete et plein de bonne chose et oui j'écrit des choses qui on un sens pour des test mouahahhaa!!!!!!", from: nil, avatar: nil, createdAt: Date()/*Date.dateFromCustomString(customString: "16/08/2018")*/, isIncomming: false),
+//        ChatMessage(id: 10, text: "Mouaiiis..sdfsdfsdf..!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: true),
+//        ChatMessage(id: 10, text: "fdsfdsfdsf....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: true),
+//        ChatMessage(id: 10, text: "Mouaiiissdfsdfsdfdsfdsfdsfdsf....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: true),
+//        ChatMessage(id: 10, text: "fmldsjfldsjflkjsdnflkjdsnflkjdsnflkjndslfkjdslkjfbndslkjhf....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: true),
+//        ChatMessage(id: 10, text: "sfdlmnsdf....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: true),
+//        ChatMessage(id: 10, text: "mslfjmlksdjfmsdjfmlkdsjflmkds....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: true),
+//        ChatMessage(id: 10, text: "Mouasdmfklndsmlkfjsdmlkfjmsdljfmldskjfmldsjfmlsdjfmlkdsjfmldsjfmlsdjfsdffjmsdfjiiis....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "16/08/2018"), isIncomming: true),
+//        ChatMessage(id: 10, text: "fdsfdsfdsfdsfdsfsdfsdfldshjflsdjhfkjsdhflkjshdflkqsdhflksdhflkqsjhfl....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: false),
+//        ChatMessage(id: 10, text: "dfslkjlsdkjfkldsjfkldsjfkljdsklfjds....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: false),
+//        ChatMessage(id: 10, text: "Modsfdslkfdslkfjdskfjkldsjfklsdjflkjdslkfjdslkfjlksdnfljksdnfljksdnflksdjflkjsdfuaiiis....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: false),
+//        ChatMessage(id: 10, text: "sdlkfjlsdkfjsdlkfjsdlkfjsd....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "18/08/2018"), isIncomming: false),
     ]
     
     override func viewDidLoad() {
@@ -46,9 +40,14 @@ class ViewController: MessageViewController {
         messages = toto
     }
     
+    func randomBool() -> Bool {
+        return arc4random_uniform(2) == 0
+    }
+    
     @IBAction func addMessageTest(_ sender: Any) {
-        let randomIndex = Int(arc4random_uniform(UInt32(titi.count)))
-        newMessage(message: titi[randomIndex])
+        let test = ChatMessage(id: (Int(arc4random_uniform(UInt32(100)))), text: "Ceci est le message \(Int(arc4random_uniform(UInt32(100))))", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "16/08/2018"), isIncomming: randomBool())
+        
+        newMessage(message: test)
         
     }
     
