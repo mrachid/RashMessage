@@ -36,6 +36,7 @@ class MessageTableViewCell: UITableViewCell {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "E, d MMM"
             let dateString = dateFormatter.string(from: chatMessage.createdAt)
+
             messageDateLabel.text = dateString
             messageDateLabel.textColor = config.messageTextDateColor
             messageDateLabel.font = UIFont.systemFont(ofSize: 12)
@@ -74,6 +75,7 @@ class MessageTableViewCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
+        super.prepareForReuse()
         trailingConstraintMessageLabel.isActive = false
         leadingConstraintMessageLabel.isActive = false
         leadingConstraintMessageDateLabel.isActive = false
@@ -85,7 +87,7 @@ class MessageTableViewCell: UITableViewCell {
     }
     
     func configureUI(valueBottomConstant: CGFloat, displayDate: Bool) {
-        self.selectionStyle = .none
+        self.selectionStyle = .none  
         bubbleBackgroundView.translatesAutoresizingMaskIntoConstraints = false
         messageLabel.translatesAutoresizingMaskIntoConstraints = false
         messageDateLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -96,10 +98,20 @@ class MessageTableViewCell: UITableViewCell {
         addSubview(messageLabel)
         addSubview(messageDateLabel)
         addSubview(errorSend)
+        errorSend.isHidden = true
         
         
         messageLabel.numberOfLines = 0
         
+        if displayDate {
+            bottomConstraintMessageLabel = messageLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -42)
+            messageDateLabel.alpha = 1
+        } else {
+            bottomConstraintMessageLabel = messageLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: valueBottomConstant)
+            messageDateLabel.alpha = 0
+        }
+        
+        bottomConstraintMessageLabel.isActive = true
         
         let constraints = [
             messageLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16),
@@ -122,14 +134,7 @@ class MessageTableViewCell: UITableViewCell {
             ]
         
         NSLayoutConstraint.activate(constraints)
-        if displayDate {
-            bottomConstraintMessageLabel = messageLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -42)
-            messageDateLabel.alpha = 1
-        } else {
-            bottomConstraintMessageLabel = messageLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: valueBottomConstant)
-            messageDateLabel.alpha = 0
-        }
-        bottomConstraintMessageLabel.isActive = true
+       
         
         trailingConstraintErrorSend = errorSend.trailingAnchor.constraint(equalTo: bubbleBackgroundView.leadingAnchor, constant: -10)
         leadingConstraintErrorSend = errorSend.leadingAnchor.constraint(equalTo: bubbleBackgroundView.trailingAnchor, constant: 10)

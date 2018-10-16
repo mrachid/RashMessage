@@ -230,20 +230,23 @@ open class MessageViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     public func newMessage(message: ChatMessage) {
-        //        Aymeric Caron
-
+        
         let lastIndexGroup = chatMessages.count - 1
         if DateHelper.dateShortFormater.string(from: (chatMessages[lastIndexGroup].first?.createdAt)!) == DateHelper.dateShortFormater.string(from: message.createdAt) {
             chatMessages[lastIndexGroup].append(message)
         } else {
             chatMessages.append([message])
         }
-        messageTableView.reloadData()
         
-        let nbrSection = self.chatMessages.count - 1
-        let lastMessage = self.chatMessages[nbrSection].count - 1
-        let index = IndexPath(item: lastMessage, section: nbrSection)
-        self.messageTableView.scrollToRow(at: index, at: .bottom, animated: false)
+        UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
+            self.messageTableView.reloadData()
+            self.view.layoutIfNeeded()
+        }, completion: {(complete) in
+            let nbrSection = self.chatMessages.count - 1
+            let lastMessage = self.chatMessages[nbrSection].count - 1
+            let index = IndexPath(item: lastMessage, section: nbrSection)
+            self.messageTableView.scrollToRow(at: index, at: .bottom, animated: true)
+        })
 
     }
     
