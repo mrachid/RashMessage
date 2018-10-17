@@ -12,7 +12,7 @@ public struct MessageConfiguration {
     public init(){}
     
     public var sendButtonText: String = "Send"
-    public var sendButtonTextColor: UIColor = UIColor(red: 221/255, green: 94/255, blue: 100/255, alpha: 1)
+    public var sendButtonTextColor: UIColor = UIColor(red: 70/255, green: 142/255, blue: 246/255, alpha: 1)//UIColor(red: 221/255, green: 94/255, blue: 100/255, alpha: 1)
     public var sendButtonBackgroundColor: UIColor = .clear
     public var sendButtonIsImage: Bool = false
     
@@ -27,15 +27,16 @@ public struct MessageConfiguration {
     
     public var messageBackgroundColorIsComming: UIColor = UIColor(white: 0.95, alpha: 1)
     public var messageBorderColorIsComming: UIColor = .clear
-    public var messageTextColorIsComming: UIColor = .darkGray
+    public var messageTextColorIsComming: UIColor = .black//.darkGray
     
-    public var messageBackgroundColorIsNotComming: UIColor = UIColor(red: 221/255, green: 94/255, blue: 100/255, alpha: 1)
+    public var messageBackgroundColorIsNotComming: UIColor = UIColor(red: 70/255, green: 142/255, blue: 246/255, alpha: 1)//UIColor(red: 221/255, green: 94/255, blue: 100/255, alpha: 1)
     public var messageBorderColorIsNotComming: UIColor = .clear
     public var messageTextColorIsNotComming: UIColor = .white
     
-    public var messageTextDateColor: UIColor = .lightGray
+    public var messageTextDateColorIsNotComming: UIColor = UIColor(white: 0.85, alpha: 1)
+    public var messageTextDateColorIncomming: UIColor = .lightGray
     
-    public var headerTextColor: UIColor = UIColor(red: 221/255, green: 94/255, blue: 100/255, alpha: 1)
+    public var headerTextColor: UIColor = UIColor(red: 70/255, green: 142/255, blue: 246/255, alpha: 1)//UIColor(red: 221/255, green: 94/255, blue: 100/255, alpha: 1)
     public var headerBackgroundColor: UIColor = .white
     
 }

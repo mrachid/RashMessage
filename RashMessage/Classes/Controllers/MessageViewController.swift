@@ -55,7 +55,7 @@ open class MessageViewController: UIViewController, UITableViewDelegate, UITable
     
     private let messageTableView: UITableView = {
         let messageTableView = UITableView()
-        messageTableView.estimatedRowHeight = 100
+        messageTableView.estimatedRowHeight = 160
         messageTableView.estimatedSectionHeaderHeight = 100
         return messageTableView
     }()
@@ -286,9 +286,9 @@ open class MessageViewController: UIViewController, UITableViewDelegate, UITable
 
 extension MessageViewController {
     
-    public func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
+//    public func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 160
+//    }
     
     public func numberOfSections(in tableView: UITableView) -> Int {
         return chatMessages.count
@@ -323,6 +323,7 @@ extension MessageViewController {
             let dateString = dateFormatter.string(from: firstMessageInSection.createdAt)
             let label = DateHeaderLabel()
             label.text = dateString
+            label.font = UIFont.systemFont(ofSize: 12)
             if let config = config {
                 label.backgroundColor = config.headerBackgroundColor
                 label.textColor = config.headerTextColor
@@ -357,12 +358,12 @@ extension MessageViewController {
         
         if nextMessage != nil {
             if message.isIncomming == nextMessage!.isIncomming {
-                cell.configureUI(valueBottomConstant: -35, displayDate: dateIsDisplayed.contains(indexPath))
+                cell.configureUI(valueBottomConstant: -27, displayDate: dateIsDisplayed.contains(indexPath))
             } else {
-                cell.configureUI(valueBottomConstant: -50, displayDate: dateIsDisplayed.contains(indexPath))
+                cell.configureUI(valueBottomConstant: -35, displayDate: dateIsDisplayed.contains(indexPath))
             }
         } else {
-            cell.configureUI(valueBottomConstant: -50, displayDate: dateIsDisplayed.contains(indexPath))
+            cell.configureUI(valueBottomConstant: -35, displayDate: dateIsDisplayed.contains(indexPath))
         }
         cell.config = config
         cell.chatMessage = message
@@ -375,12 +376,12 @@ extension MessageViewController {
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if dateIsDisplayed.contains(indexPath) {
-            dateIsDisplayed.remove(indexPath)
-        } else {
-            dateIsDisplayed.insert(indexPath)
-        }
-        tableView.reloadRows(at: [indexPath], with: .none)
+//        if dateIsDisplayed.contains(indexPath) {
+//            dateIsDisplayed.remove(indexPath)
+//        } else {
+//            dateIsDisplayed.insert(indexPath)
+//        }
+//        tableView.reloadRows(at: [indexPath], with: .none)
     }
     
 //    public func scrollToBottom(animated: Bool = false) {

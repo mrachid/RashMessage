@@ -75,7 +75,7 @@ class ViewController: MessageViewController {
         options.messageBorderColorIsNotComming = UIColor.gray
         options.messageTextColorIsNotComming = UIColor.black
         
-        options.messageTextDateColor = UIColor.lightGray
+        options.messageTextDateColorIsNotComming = UIColor.lightGray
         
         options.headerTextColor = UIColor.gray
         options.headerBackgroundColor = UIColor.red
