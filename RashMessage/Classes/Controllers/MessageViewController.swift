@@ -15,37 +15,14 @@ open class MessageViewController: UIViewController, UITableViewDelegate, UITable
         }
     }
     
-    
-    
-    public var messages = [ChatMessage]() {
+    public var mugiMessages = [MugiMessage]() {
         didSet {
             parseMessageIntoSection()
         }
     }
-//        ChatMessage(id: 15, text: "Last Message 4", from: nil, avatar: nil, createdAt: Date().addingTimeInterval(172806), isIncomming: true),
-//        ChatMessage(id: 7, text: "Message 1", from: nil, avatar: nil, createdAt: Date(), isIncomming: false),
-//        ChatMessage(id: 8, text: "Last Message 1", from: nil, avatar: nil, createdAt: Date().addingTimeInterval(172800), isIncomming: false),
-//        ChatMessage(id: 9, text: "Message 2", from: nil, avatar: nil, createdAt: Date(), isIncomming: false),
-//        ChatMessage(id: 10, text: "New Message 1", from: nil, avatar: nil, createdAt: Date().addingTimeInterval(86400), isIncomming: true),
-//        ChatMessage(id: 11, text: "New Message 2", from: nil, avatar: nil, createdAt: Date().addingTimeInterval(86400), isIncomming: true),
-//        ChatMessage(id: 12, text: "New Message 3", from: nil, avatar: nil, createdAt: Date().addingTimeInterval(86400), isIncomming: true),
-//        ChatMessage(id: 13, text: "Last Message 2", from: nil, avatar: nil, createdAt: Date().addingTimeInterval(172801), isIncomming: true),
-//        ChatMessage(id: 14, text: "Message 3", from: nil, avatar: nil, createdAt: Date(), isIncomming: true),
-//        ChatMessage(id: 15, text: "New Message 4", from: nil, avatar: nil, createdAt: Date().addingTimeInterval(86401), isIncomming: true),
-//        ChatMessage(id: 15, text: "Last Message 3", from: nil, avatar: nil, createdAt: Date().addingTimeInterval(172801), isIncomming: true),
-//    ]
     
-//    public var chatMessages: [[ChatMessage]] = [[]] {
-//        didSet {
-//            messageTableView.reloadData()
-//        }
-//    }
+    public var mugiChatMessages: [[MugiMessage]] = [[]]
 
-    public var chatMessages: [[ChatMessage]] = [[]] {
-        didSet {
-//            messageTableView.reloadData()
-        }
-    }
 
     private let cellId = "messageCell"
     private var oldMessageIsIncommingChange: Bool?
@@ -206,8 +183,8 @@ open class MessageViewController: UIViewController, UITableViewDelegate, UITable
             UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
                 self.view.layoutIfNeeded()
             }, completion: {(complete) in
-                let nbrSection = self.chatMessages.count - 1
-                let lastMessage = self.chatMessages[nbrSection].count - 1
+                let nbrSection = self.mugiChatMessages.count - 1
+                let lastMessage = self.mugiChatMessages[nbrSection].count - 1
                 let index = IndexPath(item: lastMessage, section: nbrSection)
                 self.messageTableView.scrollToRow(at: index, at: .bottom, animated: true)
             })
@@ -229,36 +206,34 @@ open class MessageViewController: UIViewController, UITableViewDelegate, UITable
         }
     }
     
-    public func newMessage(message: ChatMessage) {
+    public func newMessage(message: MugiMessage) {
         
-        let lastIndexGroup = chatMessages.count - 1
-        if DateHelper.dateShortFormater.string(from: (chatMessages[lastIndexGroup].first?.createdAt)!) == DateHelper.dateShortFormater.string(from: message.createdAt) {
-            chatMessages[lastIndexGroup].append(message)
+        let lastIndexGroup = mugiChatMessages.count - 1
+        if DateHelper.dateShortFormater.string(from: (mugiChatMessages[lastIndexGroup].first?.createdAt)!) == DateHelper.dateShortFormater.string(from: message.createdAt) {
+            mugiChatMessages[lastIndexGroup].append(message)
         } else {
-            chatMessages.append([message])
+            mugiChatMessages.append([message])
         }
         
         UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
             self.messageTableView.reloadData()
             self.view.layoutIfNeeded()
         }, completion: {(complete) in
-            let nbrSection = self.chatMessages.count - 1
-            let lastMessage = self.chatMessages[nbrSection].count - 1
+            let nbrSection = self.mugiChatMessages.count - 1
+            let lastMessage = self.mugiChatMessages[nbrSection].count - 1
             let index = IndexPath(item: lastMessage, section: nbrSection)
             self.messageTableView.scrollToRow(at: index, at: .bottom, animated: true)
         })
 
     }
-    
-    
-    
+
     private func parseMessageIntoSection() {
         
-        let messagesSorted = messages.sorted { (msg1, msg2) -> Bool in
+        let messagesSorted = mugiMessages.sorted { (msg1, msg2) -> Bool in
             return msg1.createdAt < msg2.createdAt
         }
         
-        var groupResult:[String: [ChatMessage]] = [:]
+        var groupResult:[String: [MugiMessage]] = [:]
         
         for message in messagesSorted {
             let date = DateHelper.dateShortFormater.string(from: message.createdAt)
@@ -273,12 +248,12 @@ open class MessageViewController: UIViewController, UITableViewDelegate, UITable
             return arg0.key < arg1.key
         }
         
-        var all: [[ChatMessage]] = []
+        var all: [[MugiMessage]] = []
         for group in finalResult {
             all.append(group.value)
         }
         
-        chatMessages = all
+        mugiChatMessages = all
     }
 }
 
@@ -286,38 +261,22 @@ open class MessageViewController: UIViewController, UITableViewDelegate, UITable
 
 extension MessageViewController {
     
-//    public func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 160
-//    }
-    
     public func numberOfSections(in tableView: UITableView) -> Int {
-        return chatMessages.count
+        return mugiChatMessages.count
     }
     
-    class DateHeaderLabel: UILabel {
-        
-        override init(frame: CGRect) {
-            super.init(frame: frame)
-            textAlignment = .center
-            font = UIFont.boldSystemFont(ofSize: 14)
-        }
-        
-        required init?(coder aDecoder: NSCoder) {
-            fatalError("init(coder:) has not been implemented")
-        }
-        
-        override var intrinsicContentSize: CGSize {
-            let width = super.intrinsicContentSize.width + 20
-            let height = super.intrinsicContentSize.height + 12
-            layer.cornerRadius = height / 2
-            layer.masksToBounds = true
-            return CGSize(width: width, height: height)
-        }
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return mugiChatMessages[section].count
+    }
+    
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
     }
     
     public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        if let firstMessageInSection = chatMessages[section].first {
+        if let firstMessageInSection = mugiChatMessages[section].first {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "E, d MMM"
             let dateString = dateFormatter.string(from: firstMessageInSection.createdAt)
@@ -337,24 +296,37 @@ extension MessageViewController {
             return containerView
         }
         
-        
         return nil
     }
     
-    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
-    }
-    
+  
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! MessageTableViewCell
-        var nextMessage: ChatMessage?
-        let message = chatMessages[indexPath.section][indexPath.row]
         
-        if indexPath.row < chatMessages[indexPath.section].count - 1 {
-            nextMessage = chatMessages[indexPath.section][indexPath.row + 1]
+        
+        
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! MessageTableViewCell
+        
+        
+//        switch message.kind {
+//        case .photo(_):
+//        case .text(_):
+//        }
+        
+        
+        
+        
+        
+        var nextMessage: MugiMessage?
+        let message = mugiChatMessages[indexPath.section][indexPath.row]
+        
+        if indexPath.row < mugiChatMessages[indexPath.section].count - 1 {
+            nextMessage = mugiChatMessages[indexPath.section][indexPath.row + 1]
         } else {
             nextMessage = nil
+            cell.configureUI(valueBottomConstant: -35, displayDate: dateIsDisplayed.contains(indexPath))
         }
+        
         
         if nextMessage != nil {
             if message.isIncomming == nextMessage!.isIncomming {
@@ -362,35 +334,17 @@ extension MessageViewController {
             } else {
                 cell.configureUI(valueBottomConstant: -35, displayDate: dateIsDisplayed.contains(indexPath))
             }
-        } else {
-            cell.configureUI(valueBottomConstant: -35, displayDate: dateIsDisplayed.contains(indexPath))
         }
+        
         cell.config = config
         cell.chatMessage = message
         
         return cell
+        
+        
     }
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return chatMessages[section].count
-    }
-    
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if dateIsDisplayed.contains(indexPath) {
-//            dateIsDisplayed.remove(indexPath)
-//        } else {
-//            dateIsDisplayed.insert(indexPath)
-//        }
-//        tableView.reloadRows(at: [indexPath], with: .none)
-    }
-    
-//    public func scrollToBottom(animated: Bool = false) {
-//        let collectionViewContentHeight = messageTableView.contentSize.height//collectionViewLayout.collectionViewContentSize.height
-//
-//        performBatchUpdates(nil) { _ in
-//            self.scrollRectToVisible(CGRect(0.0, collectionViewContentHeight - 1.0, 1.0, 1.0), animated: animated)
-//        }
-//    }
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
 }
 
 public protocol MessageDelegate {
@@ -398,3 +352,24 @@ public protocol MessageDelegate {
 //    func didFailAddMessage()
 }
 
+
+class DateHeaderLabel: UILabel {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        textAlignment = .center
+        font = UIFont.boldSystemFont(ofSize: 14)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override var intrinsicContentSize: CGSize {
+        let width = super.intrinsicContentSize.width + 20
+        let height = super.intrinsicContentSize.height + 12
+        layer.cornerRadius = height / 2
+        layer.masksToBounds = true
+        return CGSize(width: width, height: height)
+    }
+}

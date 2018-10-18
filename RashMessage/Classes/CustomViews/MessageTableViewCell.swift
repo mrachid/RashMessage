@@ -25,50 +25,54 @@ class MessageTableViewCell: UITableViewCell {
     var trailingConstraintErrorSend: NSLayoutConstraint!
     var leadingConstraintErrorSend: NSLayoutConstraint!
     
-    var chatMessage: ChatMessage! {
+    var chatMessage: MugiMessage! {
         didSet {
-
+            
+            switch chatMessage.kind {
+                case .text(let text): messageLabel.text = text
+                case .photo(_): break
+            }
+            
             bubbleBackgroundView.backgroundColor = chatMessage.isIncomming ? config.messageBackgroundColorIsComming : config.messageBackgroundColorIsNotComming
             bubbleBackgroundView.layer.borderColor = chatMessage.isIncomming ? config.messageBorderColorIsComming.cgColor : config.messageBorderColorIsNotComming.cgColor
             bubbleBackgroundView.layer.borderWidth = 1
             messageLabel.textColor = chatMessage.isIncomming ? config.messageTextColorIsComming : config.messageTextColorIsNotComming
-            messageLabel.text = chatMessage.text
+//            messageLabel.text = chatMessage.text
             messageLabel.font = UIFont.systemFont(ofSize: 16)
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "HH:mm"
             let dateString = dateFormatter.string(from: chatMessage.createdAt)
-
+            
             messageDateLabel.text = dateString
             messageDateLabel.textColor = chatMessage.isIncomming ? config.messageTextDateColorIncomming : config.messageTextDateColorIsNotComming
             messageDateLabel.font = UIFont.systemFont(ofSize: 12)
             backgroundColor = .clear
             bubbleBackgroundView.layer.cornerRadius = 16
             
-            if chatMessage.isIncomming {
-                leadingConstraintMessageLabel.isActive = true
-                trailingConstraintMessageLabel.isActive = false
-                
-                leadingConstraintMessageDateLabel.isActive = true
-                trailingConstraintMessageDateLabel.isActive = false
-                
-                trailingConstraintErrorSend.isActive = false
-                leadingConstraintErrorSend.isActive = true
-                
-                messageDateLabel.textAlignment = .left
-            } else {
-                leadingConstraintMessageLabel.isActive = false
-                trailingConstraintMessageLabel.isActive = true
-                
-                leadingConstraintMessageDateLabel.isActive = false
-                trailingConstraintMessageDateLabel.isActive = true
-                
-                trailingConstraintErrorSend.isActive = true
-                leadingConstraintErrorSend.isActive = false
-                
-                messageDateLabel.textAlignment = .right
-            }
+            setupConstrainte()
+            
         }
-
+        
+    }
+    
+    private func setupConstrainte() {
+        if chatMessage.isIncomming {
+            leadingConstraintMessageLabel.isActive = true
+            trailingConstraintMessageLabel.isActive = false
+            leadingConstraintMessageDateLabel.isActive = true
+            trailingConstraintMessageDateLabel.isActive = false
+            trailingConstraintErrorSend.isActive = false
+            leadingConstraintErrorSend.isActive = true
+            messageDateLabel.textAlignment = .left
+        } else {
+            leadingConstraintMessageLabel.isActive = false
+            trailingConstraintMessageLabel.isActive = true
+            leadingConstraintMessageDateLabel.isActive = false
+            trailingConstraintMessageDateLabel.isActive = true
+            trailingConstraintErrorSend.isActive = true
+            leadingConstraintErrorSend.isActive = false
+            messageDateLabel.textAlignment = .right
+        }
     }
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
@@ -107,7 +111,8 @@ class MessageTableViewCell: UITableViewCell {
         
         let constraints = [
             messageLabel.topAnchor.constraint(equalTo: topAnchor, constant: 12),
-            messageLabel.widthAnchor.constraint(lessThanOrEqualToConstant: 250),
+            messageLabel.widthAnchor.constraint(lessThanOrEqualToConstant: 260),
+            messageLabel.widthAnchor.constraint(greaterThanOrEqualToConstant: 50),
             
             bubbleBackgroundView.topAnchor.constraint(equalTo: messageLabel.topAnchor, constant: -12),
             bubbleBackgroundView.leadingAnchor.constraint(equalTo: messageLabel.leadingAnchor, constant: -12),

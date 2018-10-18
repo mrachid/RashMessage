@@ -11,43 +11,58 @@ import RashMessage
 
 class ViewController: MessageViewController {
     
-    let toto = [
-        ChatMessage(id: 1, text: "Ceci est mon premier message", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "13/08/2018"), isIncomming: true),
-        ChatMessage(id: 2, text: "Ceci est mon second message, et je vais ecrire beaucoup plus de chose afin de voir le nombre de ligne affiché", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "13/08/2018"), isIncomming: false),
-        ChatMessage(id: 3, text: "Et voici mon 3eme message avec un petit smiley!! 😀", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "14/08/2018"), isIncomming: false),
-        ChatMessage(id: 4, text: "Nice!!!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "14/08/2018"), isIncomming: false),
-        ChatMessage(id: 5, text: "Message qui doit s'afficher sur le coté gauche du chat avec un fond blanc", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "14/08/2018"), isIncomming: true),
-        ChatMessage(id: 6, text: "Troisieme section de message", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "15/08/2018"), isIncomming: false),
-        ChatMessage(id: 7, text: "Voici le premier message ecrit dans la 4eme section", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "16/08/2018"), isIncomming: false),
-        ChatMessage(id: 8, text: "Bienvenue à l'équipe de charlatan", from: nil, avatar: nil, createdAt: Date()/*Date.dateFromCustomString(customString: "16/08/2018")*/, isIncomming: false),
-        ChatMessage(id: 9, text: "Je vous souhaite d'heureuse fete et plein de bonne chose et oui j'écrit des choses qui on un sens pour des test mouahahhaa!!!!!!", from: nil, avatar: nil, createdAt: Date()/*Date.dateFromCustomString(customString: "16/08/2018")*/, isIncomming: false),
-//        ChatMessage(id: 10, text: "Mouaiiis..sdfsdfsdf..!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: true),
-//        ChatMessage(id: 10, text: "fdsfdsfdsf....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: true),
-//        ChatMessage(id: 10, text: "Mouaiiissdfsdfsdfdsfdsfdsfdsf....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: true),
-//        ChatMessage(id: 10, text: "fmldsjfldsjflkjsdnflkjdsnflkjdsnflkjndslfkjdslkjfbndslkjhf....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: true),
-//        ChatMessage(id: 10, text: "sfdlmnsdf....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: true),
-//        ChatMessage(id: 10, text: "mslfjmlksdjfmsdjfmlkdsjflmkds....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: true),
-//        ChatMessage(id: 10, text: "Mouasdmfklndsmlkfjsdmlkfjmsdljfmldskjfmldsjfmlsdjfmlkdsjfmldsjfmlsdjfsdffjmsdfjiiis....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "16/08/2018"), isIncomming: true),
-//        ChatMessage(id: 10, text: "fdsfdsfdsfdsfdsfsdfsdfldshjflsdjhfkjsdhflkjshdflkqsdhflksdhflkqsjhfl....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: false),
-//        ChatMessage(id: 10, text: "dfslkjlsdkjfkldsjfkldsjfkljdsklfjds....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: false),
-//        ChatMessage(id: 10, text: "Modsfdslkfdslkfjdskfjkldsjfklsdjflkjdslkfjdslkfjlksdnfljksdnfljksdnflksdjflkjsdfuaiiis....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "17/08/2018"), isIncomming: false),
-//        ChatMessage(id: 10, text: "sdlkfjlsdkfjsdlkfjsdlkfjsd....!", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "18/08/2018"), isIncomming: false),
+    let simpleDataText = [
+        "It's ok for me",
+        "lol, is a joke right? tell the truth",
+        "1-800-555-0000",
+        "One Infinite Loop Cupertino, CA 95014 This is some extra text that should not be detected.",
+        "This is an example of the date detector 11/11/2017. April 1st is April Fools Day. Next Friday is not Friday the 13th.",
+        "https://github.com/SD10",
+        "Check out this awesome UI library for Chat",
+        "My favorite things in life don’t cost any money. It’s really clear that the most precious resource we all have is time.",
+        """
+            You know, this iPhone, as a matter of fact, the engine in here is made in America.
+            And not only are the engines in here made in America, but engines are made in America and are exported.
+            The glass on this phone is made in Kentucky. And so we've been working for years on doing more and more in the United States.
+            """,
+        """
+            Remembering that I'll be dead soon is the most important tool I've ever encountered to help me make the big choices in life.
+            Because almost everything - all external expectations, all pride, all fear of embarrassment or failure -
+            these things just fall away in the face of death, leaving only what is truly important.
+            """,
+        "I think if you do something and it turns out pretty good, then you should go do something else wonderful, not dwell on it for too long. Just figure out what’s next.",
+        "Price is rarely the most important thing. A cheap product might sell some units. Somebody gets it home and they feel great when they pay the money, but then they get it home and use it and the joy is gone."
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //        config = setupConfigChat()
-        messages = toto
+        mugiMessages = [
+            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            
+        ]
     }
+    
     
     func randomBool() -> Bool {
         return arc4random_uniform(2) == 0
     }
     
     @IBAction func addMessageTest(_ sender: Any) {
-        let test = ChatMessage(id: (Int(arc4random_uniform(UInt32(100)))), text: "Ceci est le message \(Int(arc4random_uniform(UInt32(100))))", from: nil, avatar: nil, createdAt: Date.dateFromCustomString(customString: "16/08/2018"), isIncomming: randomBool())
-        
-        newMessage(message: test)
+
+        newMessage(message: MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()))
         
     }
     
