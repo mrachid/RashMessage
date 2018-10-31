@@ -38,21 +38,33 @@ class ViewController: MessageViewController {
         super.viewDidLoad()
         //        config = setupConfigChat()
         mugiMessages = [
-            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
-            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
-            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
-            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
-            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
-            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
-            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
-            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
-            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
-            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
-            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
-            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
-            MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
-            
+            MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(image: UIImage(named: "ludovico_einaudi")! , sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(image: UIImage(named: "SJ")! , sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(image: UIImage(named: "TC")! , sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(image: UIImage(named: "ludovico_einaudi")! , sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(image: UIImage(named: "SJ")! , sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(image: UIImage(named: "ludovico_einaudi")! , sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(image: UIImage(named: "SJ")! , sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(image: UIImage(named: "TC")! , sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
         ]
+        
+        
+
+    
     }
     
     
@@ -61,9 +73,7 @@ class ViewController: MessageViewController {
     }
     
     @IBAction func addMessageTest(_ sender: Any) {
-
-        newMessage(message: MugiMessage(kind: MessageKind.text(simpleDataText[(Int(arc4random_uniform(UInt32(11))))]), sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()))
-        
+        newMessage(message:  MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud"), messageId: 1, createdAt: Date(), isIncomming: randomBool()))
     }
     
     private func setupConfigChat() -> MessageConfiguration {

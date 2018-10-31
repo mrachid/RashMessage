@@ -1,5 +1,5 @@
 //
-//  ChatMessage.swift
+//  MugiMessage.swift
 //  Pods-RashMessage_Example
 //
 //  Created by Mahmoud RACHID on 10/09/18.
@@ -21,33 +21,11 @@ public protocol MessageType {
     
 }
 
-
-open class ChatMessage {
-    var id: Int
-    var text: String
-    var from: String?
-    var avatar: String?
-    var createdAt: Date
-    var isIncomming: Bool
-
-    public init(id: Int, text: String, from: String?, avatar: String?, createdAt: Date, isIncomming: Bool) {
-        self.id = id
-        self.text = text
-        self.from = from
-        self.avatar = avatar
-        self.createdAt = createdAt
-        self.isIncomming = isIncomming
-    }
-}
-
-
-
 public protocol MediaItem {
 
     var url: URL? { get }
     var image: UIImage? { get }
 }
-
 
 private struct MugiMediaItem: MediaItem {
 
@@ -59,7 +37,22 @@ private struct MugiMediaItem: MediaItem {
     }
 }
 
+public protocol DocItem {
+    
+    var url: URL? { get }
+    var name: String? { get }
+}
 
+private struct MugiDocItem: DocItem {
+    
+    var url: URL?
+    var name: String?
+    
+    init(url: URL, name: String) {
+        self.url = url
+        self.name = name
+    }
+}
 
 public struct Sender {
 
@@ -75,16 +68,17 @@ public struct Sender {
 public enum MessageKind {
     case text(String)
     case photo(MediaItem)
+    case doc(DocItem)
 }
 
-public class MugiMessage {//: MessageType {
+public class MugiMessage {
     var messageId: Int = 0
     var sender: Sender
     var createdAt: Date
     var kind: MessageKind
     var isIncomming: Bool
 
-    public init(kind: MessageKind, sender: Sender, messageId: Int, createdAt: Date, isIncomming: Bool) {
+    private init(kind: MessageKind, sender: Sender, messageId: Int, createdAt: Date, isIncomming: Bool) {
         self.kind = kind
         self.sender = sender
         self.messageId = messageId
@@ -92,13 +86,18 @@ public class MugiMessage {//: MessageType {
         self.isIncomming = isIncomming
     }
 
-    convenience init(text: String, sender: Sender, messageId: Int, createdAt: Date, isIncomming: Bool) {
+    public convenience init(text: String, sender: Sender, messageId: Int, createdAt: Date, isIncomming: Bool) {
         self.init(kind: .text(text), sender: sender, messageId: messageId, createdAt: createdAt, isIncomming: isIncomming)
     }
 
-    convenience init(image: UIImage, sender: Sender, messageId: Int, createdAt: Date, isIncomming: Bool) {
+    public convenience init(image: UIImage, sender: Sender, messageId: Int, createdAt: Date, isIncomming: Bool) {
         let mediaItem = MugiMediaItem(image: image)
         self.init(kind: .photo(mediaItem), sender: sender, messageId: messageId, createdAt: createdAt, isIncomming: isIncomming)
+    }
+
+    public convenience init(url: URL, name: String, sender: Sender, messageId: Int, createdAt: Date, isIncomming: Bool) {
+        let docItem = MugiDocItem(url: url, name: name)
+        self.init(kind: .doc(docItem), sender: sender, messageId: messageId, createdAt: createdAt, isIncomming: isIncomming)
     }
 
 }

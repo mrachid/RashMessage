@@ -25,4 +25,12 @@ class DateHelper {
         
         return dateFormater
     }()
+    
+    //10:45
+    static let dateTimeShortFormater: DateFormatter = {
+        let dateFormater = DateFormatter()
+        dateFormater.setLocalizedDateFormatFromTemplate("HH:mm")
+        
+        return dateFormater
+    }()
 }
