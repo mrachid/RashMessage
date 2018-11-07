@@ -36,4 +36,12 @@ final class MugiMessageServices {
         
         return all
     }
+    
+    public static func displayAvatarByMessage(firstMessage: MugiMessage, secondeMessage: MugiMessage?) -> Bool {
+        if firstMessage.isIncomming && secondeMessage?.isIncomming != firstMessage.isIncomming {
+            return true
+        } else {
+            return false
+        }
+    }
 }

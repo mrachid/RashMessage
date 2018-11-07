@@ -8,28 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		0B997D578362E7F4FDA930BEECF0E86D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		159D05E9EFAB0EA64CEF765C8F37472A /* MessageTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94992784110BB9963692B56FE114DFC1 /* MessageTextViewController.swift */; };
+		0C8042ECE84B2B99232BEA88F859D400 /* RashMessage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E57A083F35AA1E1985D4FCF9DDF62A62 /* RashMessage-dummy.m */; };
+		1523568C9CF15ABFDA43B4B6581CCE17 /* ImagesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F3149747B9A1ED4E3F37D2C9367AA7 /* ImagesHelper.swift */; };
+		189261D4BE14019DC3F6E2594467A7D6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6948BDE61B8BE7EA708D8DBECA64F0F8 /* Constants.swift */; };
 		196EE223D420A6F993490E9A802D72F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		1AF05A7824AABD5BF318934917B50FF6 /* Pods-RashMessage_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E385FE8FA438377B919A287AA107F75 /* Pods-RashMessage_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		20F7562E593955BC5805463A51100B2B /* Pods-RashMessage_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 68D64DA87C343B4AF973248C75BB2DD0 /* Pods-RashMessage_Tests-dummy.m */; };
-		217C7943213408C698D5DFED07BD7614 /* MessageViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71352F168085ADD662599F22DF8534C /* MessageViewController+Extension.swift */; };
-		29F970967DB0E28CC1DDE305247316D0 /* MessageServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7779FADC07E21AFF87FA65DF4B9E7E69 /* MessageServices.swift */; };
-		2A3B683C0C3BF6215CAE9B674AD2C6CF /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 4936E9E661F79A684A72F5667A1FE104 /* add.png */; };
-		4429CB9E3B75DA5CBC3AF4A41DF4F27B /* readme.me in Sources */ = {isa = PBXBuildFile; fileRef = 61B020983910E3931DFEF32676B50592 /* readme.me */; };
-		47F9E71B39EC20340F9CDDBF1D2777A7 /* MugiMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C9571DDDFBC87DD71D09951BE263CE /* MugiMessage.swift */; };
-		4A37912C49E3441634E8D02F6ECFE4E0 /* MessageTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFD8C564C3D02C1B8EBC9415C1F4501 /* MessageTextTableViewCell.swift */; };
-		584B193400171335B165449B5D6044AA /* ImagesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064F75DC05DDE1D394860A21C763C6F6 /* ImagesHelper.swift */; };
+		2A3B683C0C3BF6215CAE9B674AD2C6CF /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = A24B576B1E967604A42E715D6EC05FA1 /* add.png */; };
 		62CC58B9D6C6F5849136F98138738EB1 /* Pods-RashMessage_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C982A8E9188D28FCC0870E6F09EB2F91 /* Pods-RashMessage_Example-dummy.m */; };
 		77E38FAD4DB58F2BC4B404677BA9AEA5 /* RashMessageAssets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E216C293CE87AA7E0F2EBD6D07B02D37 /* RashMessageAssets.bundle */; };
+		7A6B1EE2A48707C17C6AAFD722488B52 /* MessageConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E16518A170411CBD1A9B910C403A72 /* MessageConfiguration.swift */; };
+		7CB326BF60D1EC35772AAA378C2AF457 /* MessageViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F42380EA54B6B265E6D1DFCB4C4117 /* MessageViewController+Extension.swift */; };
+		8E305F8CB4134221B7E99614D7CDFD93 /* readme.me in Sources */ = {isa = PBXBuildFile; fileRef = 0A88C099931FA6551B6F56B799AA869E /* readme.me */; };
+		8F86EC26F8860CD34617BE1F8F65FF9E /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BD4EE1118199C51CC29D6CEFAE3481 /* UIColor+Hex.swift */; };
+		9C58291B3C4C06BFBD723146C43A3415 /* MessageImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B629F313585ADF53DF0B7CEB9E18B1B /* MessageImageTableViewCell.swift */; };
 		A39145200E4396C5AA75DC9D528B0B82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		AA471A7328702E8C783581E195CBE6DE /* MessageImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EA31D797A96E92941370CA0EC9E20A /* MessageImageTableViewCell.swift */; };
-		AE8C10F03501ED29FA0E3887413267F0 /* exclamation.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E532C496D939342CDD869331112A68F /* exclamation.png */; };
-		BDC9BD5D17A9C149DCDB299F216428C1 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533F0AA1A8CF7160468479BA44EF75EF /* Date+Extension.swift */; };
-		CA037B976C0146D4DDC3B177DDFADD1F /* MessageConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439E720AFB7E65F3B172D15B8E678FC9 /* MessageConfiguration.swift */; };
+		AE8C10F03501ED29FA0E3887413267F0 /* exclamation.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FA3CC84A98C9D9D4F9EB15C6B6E57C /* exclamation.png */; };
 		CE686DB0FEFF5633B5478433E2A68B9F /* Pods-RashMessage_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FA01C24104703DCFD629986BD3823C7 /* Pods-RashMessage_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D4C92958D6CA7AE3336A8877672C7464 /* RashMessage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E66A51BB1B71B5AB2C757C580050A3BE /* RashMessage-dummy.m */; };
-		EA53E83A199E91FCD954FA1FE846DB1F /* send.png in Resources */ = {isa = PBXBuildFile; fileRef = 8517B4FE6255B67158F1828E0AF1B7CA /* send.png */; };
-		F89C8AA870DA408CCBBBB7E1D5C67C3C /* RashMessage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB4DFEB7B66A569B57DBA8BA749A767 /* RashMessage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFB582669FDCD59B44AA61EDC729B6AE /* DeviceUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2C0AA54040F18C7075FBA14472FB78 /* DeviceUtils.swift */; };
+		D3294E314684243C2F8C64F56FBEBE74 /* MugiMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E75F01289C6F3B98846768F1C4EBAAA /* MugiMessage.swift */; };
+		D80A1BE4CC280087CB3D4FC7AD327EA7 /* MessageTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BF113795150B73EB2A4FAD80981609 /* MessageTextTableViewCell.swift */; };
+		DC4473725CAEB9DC6CC51CF3B933BE5C /* MessageServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB28018CDE3DAD524AC06BAA7B591D5 /* MessageServices.swift */; };
+		DF100A9E7211A30BE2F2FD961B5CF8B5 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5806CC13460391206B80CC4B3A97B /* Date+Extension.swift */; };
+		EA53E83A199E91FCD954FA1FE846DB1F /* send.png in Resources */ = {isa = PBXBuildFile; fileRef = 18A0D16626BD5415263945393B794181 /* send.png */; };
+		EC5392A288A66E07B0AB15A045E850AA /* MessageTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACE7370F1BFF009A36A9723FDDCE1F0 /* MessageTextViewController.swift */; };
+		F89C8AA870DA408CCBBBB7E1D5C67C3C /* RashMessage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 80B9E368FF93B0D563D17B5D0261AFAF /* RashMessage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,53 +61,56 @@
 
 /* Begin PBXFileReference section */
 		05140C8C6061D853B98547C10CBEAFA6 /* Pods-RashMessage_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RashMessage_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		064F75DC05DDE1D394860A21C763C6F6 /* ImagesHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImagesHelper.swift; sourceTree = "<group>"; };
-		14EA31D797A96E92941370CA0EC9E20A /* MessageImageTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageImageTableViewCell.swift; sourceTree = "<group>"; };
+		0A88C099931FA6551B6F56B799AA869E /* readme.me */ = {isa = PBXFileReference; includeInIndex = 1; name = readme.me; path = RashMessage/Classes/readme.me; sourceTree = "<group>"; };
+		0CD72CBF63CF33FF82A494CB022D19A0 /* RashMessage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RashMessage.modulemap; sourceTree = "<group>"; };
+		18A0D16626BD5415263945393B794181 /* send.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = send.png; path = RashMessage/Assets/ImageAsset/send.png; sourceTree = "<group>"; };
+		19BD4EE1118199C51CC29D6CEFAE3481 /* UIColor+Hex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		1D2C0AA54040F18C7075FBA14472FB78 /* DeviceUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DeviceUtils.swift; sourceTree = "<group>"; };
 		1FA01C24104703DCFD629986BD3823C7 /* Pods-RashMessage_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RashMessage_Tests-umbrella.h"; sourceTree = "<group>"; };
+		21FA3CC84A98C9D9D4F9EB15C6B6E57C /* exclamation.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = exclamation.png; path = RashMessage/Assets/ImageAsset/exclamation.png; sourceTree = "<group>"; };
 		2E385FE8FA438377B919A287AA107F75 /* Pods-RashMessage_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RashMessage_Example-umbrella.h"; sourceTree = "<group>"; };
+		2E75F01289C6F3B98846768F1C4EBAAA /* MugiMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MugiMessage.swift; sourceTree = "<group>"; };
 		2F6B387FA648A6D21291D2BCAB203CCB /* Pods-RashMessage_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RashMessage_Example.release.xcconfig"; sourceTree = "<group>"; };
-		3D21EFD50E0E8FBB4E5E18AF360A0A03 /* ResourceBundle-RashMessageAssets-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-RashMessageAssets-Info.plist"; sourceTree = "<group>"; };
-		3D9B22A25ED6327B5635C485E9B9FB27 /* RashMessage.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = RashMessage.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		3E532C496D939342CDD869331112A68F /* exclamation.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = exclamation.png; path = RashMessage/Assets/ImageAsset/exclamation.png; sourceTree = "<group>"; };
 		3EAD7A9290F0FEB3BB324EC6EAAADD57 /* Pods-RashMessage_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RashMessage_Example.modulemap"; sourceTree = "<group>"; };
-		439E720AFB7E65F3B172D15B8E678FC9 /* MessageConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageConfiguration.swift; sourceTree = "<group>"; };
+		3EC87F0B24E597FC1A7ECB29842DDE9F /* RashMessage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RashMessage-prefix.pch"; sourceTree = "<group>"; };
 		472438C71A639E633FC5478D1072F3FB /* Pods-RashMessage_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RashMessage_Tests.modulemap"; sourceTree = "<group>"; };
-		4936E9E661F79A684A72F5667A1FE104 /* add.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = add.png; path = RashMessage/Assets/ImageAsset/add.png; sourceTree = "<group>"; };
-		4BF48A1C02CC597A9DFB0CAE0B4578BE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		4FFD8C564C3D02C1B8EBC9415C1F4501 /* MessageTextTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageTextTableViewCell.swift; sourceTree = "<group>"; };
-		527336BA56984323FCD0B8DFE6B52200 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		4B629F313585ADF53DF0B7CEB9E18B1B /* MessageImageTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageImageTableViewCell.swift; sourceTree = "<group>"; };
+		4FE5806CC13460391206B80CC4B3A97B /* Date+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		52D8C74E5832A2DFE07FE5DD2405F202 /* Pods_RashMessage_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RashMessage_Tests.framework; path = "Pods-RashMessage_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		533F0AA1A8CF7160468479BA44EF75EF /* Date+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
-		552F0FBD0ACB5AEB5BA0AE17CCB7E64F /* RashMessage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RashMessage-prefix.pch"; sourceTree = "<group>"; };
+		57BF113795150B73EB2A4FAD80981609 /* MessageTextTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageTextTableViewCell.swift; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5CB28018CDE3DAD524AC06BAA7B591D5 /* MessageServices.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageServices.swift; sourceTree = "<group>"; };
 		5F89499CE56EC2A98B326E49A1A1ABAB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		61B020983910E3931DFEF32676B50592 /* readme.me */ = {isa = PBXFileReference; includeInIndex = 1; name = readme.me; path = RashMessage/Classes/readme.me; sourceTree = "<group>"; };
-		646ABEBC36B83FA19B97E359A986F545 /* RashMessage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RashMessage.xcconfig; sourceTree = "<group>"; };
 		68D64DA87C343B4AF973248C75BB2DD0 /* Pods-RashMessage_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RashMessage_Tests-dummy.m"; sourceTree = "<group>"; };
 		68DB7F8527E36EA0D6681A75EA3524C4 /* RashMessage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RashMessage.framework; path = RashMessage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6948BDE61B8BE7EA708D8DBECA64F0F8 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6C3FA00177DF2543A360106150155D3F /* Pods-RashMessage_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RashMessage_Example-frameworks.sh"; sourceTree = "<group>"; };
-		6D3852F66B3FF8171BF36ECD50C5E768 /* RashMessage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RashMessage.modulemap; sourceTree = "<group>"; };
-		7779FADC07E21AFF87FA65DF4B9E7E69 /* MessageServices.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageServices.swift; sourceTree = "<group>"; };
+		7438610814F125BAC92C4070C3CF4D0F /* ResourceBundle-RashMessageAssets-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-RashMessageAssets-Info.plist"; sourceTree = "<group>"; };
 		78319BEE8B494055AE83BA213C39E604 /* Pods-RashMessage_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RashMessage_Example-resources.sh"; sourceTree = "<group>"; };
+		79204735E44E4E9719FDA1518EB919ED /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AEE5570265D18A542949E3E19D51284 /* Pods_RashMessage_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RashMessage_Example.framework; path = "Pods-RashMessage_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D4D5085139C0A7C1FF43DC32528628A /* RashMessage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RashMessage.xcconfig; sourceTree = "<group>"; };
+		7E151FD3EC3DEE67FB3CC50FE075E53B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		80B9E368FF93B0D563D17B5D0261AFAF /* RashMessage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RashMessage-umbrella.h"; sourceTree = "<group>"; };
 		83B7808E8CF4C698405B8B9DBFC0C191 /* Pods-RashMessage_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RashMessage_Tests-resources.sh"; sourceTree = "<group>"; };
-		8517B4FE6255B67158F1828E0AF1B7CA /* send.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = send.png; path = RashMessage/Assets/ImageAsset/send.png; sourceTree = "<group>"; };
+		85E16518A170411CBD1A9B910C403A72 /* MessageConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageConfiguration.swift; sourceTree = "<group>"; };
 		85E7F373048534D634C7921A91B1C2FD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88317C50390DAB0E2522CCC14F75CC50 /* RashMessage.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = RashMessage.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		884892CD957DF6625995789C0CFC3DFD /* Pods-RashMessage_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RashMessage_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		8ACE7370F1BFF009A36A9723FDDCE1F0 /* MessageTextViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageTextViewController.swift; sourceTree = "<group>"; };
 		90EF7A38974712D36F5DCD5C501EDF0C /* Pods-RashMessage_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RashMessage_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		91A5BF9AE98AF06D5FB7B1629604FA5A /* Pods-RashMessage_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RashMessage_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		933D22F95B013FED0FE8C507CC830716 /* Pods-RashMessage_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RashMessage_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		94992784110BB9963692B56FE114DFC1 /* MessageTextViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageTextViewController.swift; sourceTree = "<group>"; };
-		A71352F168085ADD662599F22DF8534C /* MessageViewController+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "MessageViewController+Extension.swift"; sourceTree = "<group>"; };
-		A8C9571DDDFBC87DD71D09951BE263CE /* MugiMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MugiMessage.swift; sourceTree = "<group>"; };
+		A24B576B1E967604A42E715D6EC05FA1 /* add.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = add.png; path = RashMessage/Assets/ImageAsset/add.png; sourceTree = "<group>"; };
 		B85439E4EFA1870AAC687C4B581EC28B /* Pods-RashMessage_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RashMessage_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		B9B7635526A2793C538A13594BEE21F9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C982A8E9188D28FCC0870E6F09EB2F91 /* Pods-RashMessage_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RashMessage_Example-dummy.m"; sourceTree = "<group>"; };
+		D1F3149747B9A1ED4E3F37D2C9367AA7 /* ImagesHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ImagesHelper.swift; sourceTree = "<group>"; };
 		E216C293CE87AA7E0F2EBD6D07B02D37 /* RashMessageAssets.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = RashMessageAssets.bundle; path = "RashMessage-RashMessageAssets.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2EC7FBE11FF96C2C6C2FC7122107837 /* Pods-RashMessage_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RashMessage_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		E66A51BB1B71B5AB2C757C580050A3BE /* RashMessage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RashMessage-dummy.m"; sourceTree = "<group>"; };
-		EAB4DFEB7B66A569B57DBA8BA749A767 /* RashMessage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RashMessage-umbrella.h"; sourceTree = "<group>"; };
+		E57A083F35AA1E1985D4FCF9DDF62A62 /* RashMessage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RashMessage-dummy.m"; sourceTree = "<group>"; };
+		E9F42380EA54B6B265E6D1DFCB4C4117 /* MessageViewController+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "MessageViewController+Extension.swift"; sourceTree = "<group>"; };
+		EF742E4D722C5D884B637C29F8E2C248 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		FE010DEBF8E57761D2F135FCA4D642CB /* Pods-RashMessage_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RashMessage_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +149,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19A717544D9C68F297612C477278ACCD /* RashMessage */ = {
+			isa = PBXGroup;
+			children = (
+				0A88C099931FA6551B6F56B799AA869E /* readme.me */,
+				4D27B1822527A6C4DF61BB884BD22A1A /* Controllers */,
+				78C568E2935E1C87BD91FF87F5E14B2C /* CustomViews */,
+				A7EBFA5ECF12A523247739366F99ADCE /* Extensions */,
+				8E9BA01DADEE58E510CC7DE325D59B98 /* Helpers */,
+				EB7E38CA8CE9F8A25DA2C1E9816F5624 /* Models */,
+				493CA79C03F152C7E7C5EDFC0126B00B /* Pod */,
+				CDC2FD316BC1ECEBBE0F03CF3508622D /* Resources */,
+				3474890D6CA606F8837E49CAE459F4D0 /* Services */,
+				5EB7BC418362EB12BBD675ED6AAA42F7 /* Support Files */,
+				4C2F74A2C1673E62DA2DB35AA7B0564E /* Utils */,
+			);
+			name = RashMessage;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		21E548A40FBA82B3975B88A7F3F3CB2C /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				19A717544D9C68F297612C477278ACCD /* RashMessage */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		3474890D6CA606F8837E49CAE459F4D0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5CB28018CDE3DAD524AC06BAA7B591D5 /* MessageServices.swift */,
+			);
+			name = Services;
+			path = RashMessage/Classes/Services;
+			sourceTree = "<group>";
+		};
 		355A02D8DA5F3C6A58CAB2C29FE71588 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +192,35 @@
 				5C4385CFBD42872F813C6CA279A1BAF8 /* Pods-RashMessage_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		493CA79C03F152C7E7C5EDFC0126B00B /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				7E151FD3EC3DEE67FB3CC50FE075E53B /* LICENSE */,
+				88317C50390DAB0E2522CCC14F75CC50 /* RashMessage.podspec */,
+				EF742E4D722C5D884B637C29F8E2C248 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		4C2F74A2C1673E62DA2DB35AA7B0564E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6948BDE61B8BE7EA708D8DBECA64F0F8 /* Constants.swift */,
+				1D2C0AA54040F18C7075FBA14472FB78 /* DeviceUtils.swift */,
+			);
+			name = Utils;
+			path = RashMessage/Classes/Utils;
+			sourceTree = "<group>";
+		};
+		4D27B1822527A6C4DF61BB884BD22A1A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8ACE7370F1BFF009A36A9723FDDCE1F0 /* MessageTextViewController.swift */,
+			);
+			name = Controllers;
+			path = RashMessage/Classes/Controllers;
 			sourceTree = "<group>";
 		};
 		5C4385CFBD42872F813C6CA279A1BAF8 /* Pods-RashMessage_Tests */ = {
@@ -178,14 +249,19 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		5FCA4A9BED74631B1A71F8F25D56E43D /* Pod */ = {
+		5EB7BC418362EB12BBD675ED6AAA42F7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4BF48A1C02CC597A9DFB0CAE0B4578BE /* LICENSE */,
-				3D9B22A25ED6327B5635C485E9B9FB27 /* RashMessage.podspec */,
-				527336BA56984323FCD0B8DFE6B52200 /* README.md */,
+				79204735E44E4E9719FDA1518EB919ED /* Info.plist */,
+				0CD72CBF63CF33FF82A494CB022D19A0 /* RashMessage.modulemap */,
+				7D4D5085139C0A7C1FF43DC32528628A /* RashMessage.xcconfig */,
+				E57A083F35AA1E1985D4FCF9DDF62A62 /* RashMessage-dummy.m */,
+				3EC87F0B24E597FC1A7ECB29842DDE9F /* RashMessage-prefix.pch */,
+				80B9E368FF93B0D563D17B5D0261AFAF /* RashMessage-umbrella.h */,
+				7438610814F125BAC92C4070C3CF4D0F /* ResourceBundle-RashMessageAssets-Info.plist */,
 			);
-			name = Pod;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/RashMessage";
 			sourceTree = "<group>";
 		};
 		5FD09CFBCDB3EEDF3DA2BF5CB02575EF /* Products */ = {
@@ -199,96 +275,35 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		62D5C71DE73841C9FC9D8C3D91A73F60 /* RashMessage */ = {
+		78C568E2935E1C87BD91FF87F5E14B2C /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				61B020983910E3931DFEF32676B50592 /* readme.me */,
-				9F44D095043947E27700FD6429C2E6BD /* Controllers */,
-				AE4764AE68BEB7B3681475EE43806867 /* CustomViews */,
-				655D72196BCC4E3A58387969711E5719 /* Extensions */,
-				9D4D6168D72A5D8394B566CFD1AE56A3 /* Helpers */,
-				F497CE05612C2E6440E871C06664BE89 /* Models */,
-				5FCA4A9BED74631B1A71F8F25D56E43D /* Pod */,
-				732BC475BA908305AA8E6C7E89E9655B /* Resources */,
-				670ED0E7BBC85F431DA534790A37AC8E /* Services */,
-				7B24B2243CCB0EE9A9EF6D64E6F1D24B /* Support Files */,
+				4B629F313585ADF53DF0B7CEB9E18B1B /* MessageImageTableViewCell.swift */,
+				57BF113795150B73EB2A4FAD80981609 /* MessageTextTableViewCell.swift */,
 			);
-			name = RashMessage;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		655D72196BCC4E3A58387969711E5719 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				533F0AA1A8CF7160468479BA44EF75EF /* Date+Extension.swift */,
-				A71352F168085ADD662599F22DF8534C /* MessageViewController+Extension.swift */,
-			);
-			name = Extensions;
-			path = RashMessage/Classes/Extensions;
-			sourceTree = "<group>";
-		};
-		670ED0E7BBC85F431DA534790A37AC8E /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				7779FADC07E21AFF87FA65DF4B9E7E69 /* MessageServices.swift */,
-			);
-			name = Services;
-			path = RashMessage/Classes/Services;
-			sourceTree = "<group>";
-		};
-		732BC475BA908305AA8E6C7E89E9655B /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				4936E9E661F79A684A72F5667A1FE104 /* add.png */,
-				3E532C496D939342CDD869331112A68F /* exclamation.png */,
-				8517B4FE6255B67158F1828E0AF1B7CA /* send.png */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		7B24B2243CCB0EE9A9EF6D64E6F1D24B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B9B7635526A2793C538A13594BEE21F9 /* Info.plist */,
-				6D3852F66B3FF8171BF36ECD50C5E768 /* RashMessage.modulemap */,
-				646ABEBC36B83FA19B97E359A986F545 /* RashMessage.xcconfig */,
-				E66A51BB1B71B5AB2C757C580050A3BE /* RashMessage-dummy.m */,
-				552F0FBD0ACB5AEB5BA0AE17CCB7E64F /* RashMessage-prefix.pch */,
-				EAB4DFEB7B66A569B57DBA8BA749A767 /* RashMessage-umbrella.h */,
-				3D21EFD50E0E8FBB4E5E18AF360A0A03 /* ResourceBundle-RashMessageAssets-Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/RashMessage";
+			name = CustomViews;
+			path = RashMessage/Classes/CustomViews;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BEE6730D5C1E8B7147DA14A22B7CA546 /* Development Pods */,
+				21E548A40FBA82B3975B88A7F3F3CB2C /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				5FD09CFBCDB3EEDF3DA2BF5CB02575EF /* Products */,
 				355A02D8DA5F3C6A58CAB2C29FE71588 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9D4D6168D72A5D8394B566CFD1AE56A3 /* Helpers */ = {
+		8E9BA01DADEE58E510CC7DE325D59B98 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				064F75DC05DDE1D394860A21C763C6F6 /* ImagesHelper.swift */,
-				439E720AFB7E65F3B172D15B8E678FC9 /* MessageConfiguration.swift */,
+				D1F3149747B9A1ED4E3F37D2C9367AA7 /* ImagesHelper.swift */,
+				85E16518A170411CBD1A9B910C403A72 /* MessageConfiguration.swift */,
 			);
 			name = Helpers;
 			path = RashMessage/Classes/Helpers;
-			sourceTree = "<group>";
-		};
-		9F44D095043947E27700FD6429C2E6BD /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				94992784110BB9963692B56FE114DFC1 /* MessageTextViewController.swift */,
-			);
-			name = Controllers;
-			path = RashMessage/Classes/Controllers;
 			sourceTree = "<group>";
 		};
 		A0C26E3FF9D2855EE4AF836E1EA03F75 /* Pods-RashMessage_Example */ = {
@@ -309,14 +324,15 @@
 			path = "Target Support Files/Pods-RashMessage_Example";
 			sourceTree = "<group>";
 		};
-		AE4764AE68BEB7B3681475EE43806867 /* CustomViews */ = {
+		A7EBFA5ECF12A523247739366F99ADCE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				14EA31D797A96E92941370CA0EC9E20A /* MessageImageTableViewCell.swift */,
-				4FFD8C564C3D02C1B8EBC9415C1F4501 /* MessageTextTableViewCell.swift */,
+				4FE5806CC13460391206B80CC4B3A97B /* Date+Extension.swift */,
+				E9F42380EA54B6B265E6D1DFCB4C4117 /* MessageViewController+Extension.swift */,
+				19BD4EE1118199C51CC29D6CEFAE3481 /* UIColor+Hex.swift */,
 			);
-			name = CustomViews;
-			path = RashMessage/Classes/CustomViews;
+			name = Extensions;
+			path = RashMessage/Classes/Extensions;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -327,18 +343,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BEE6730D5C1E8B7147DA14A22B7CA546 /* Development Pods */ = {
+		CDC2FD316BC1ECEBBE0F03CF3508622D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				62D5C71DE73841C9FC9D8C3D91A73F60 /* RashMessage */,
+				A24B576B1E967604A42E715D6EC05FA1 /* add.png */,
+				21FA3CC84A98C9D9D4F9EB15C6B6E57C /* exclamation.png */,
+				18A0D16626BD5415263945393B794181 /* send.png */,
 			);
-			name = "Development Pods";
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		F497CE05612C2E6440E871C06664BE89 /* Models */ = {
+		EB7E38CA8CE9F8A25DA2C1E9816F5624 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A8C9571DDDFBC87DD71D09951BE263CE /* MugiMessage.swift */,
+				2E75F01289C6F3B98846768F1C4EBAAA /* MugiMessage.swift */,
 			);
 			name = Models;
 			path = RashMessage/Classes/Models;
@@ -398,7 +416,7 @@
 			buildConfigurationList = B6913233BA33D77D9C85B71B49EBBCB1 /* Build configuration list for PBXNativeTarget "RashMessage" */;
 			buildPhases = (
 				967341BA2E67375A3D993FBE321E9CF4 /* Headers */,
-				5D34B54AF60565BFC203FF3E29B30962 /* Sources */,
+				14A4DD495848587CA5B6BBD65B7E56A4 /* Sources */,
 				9ACA613CDC20FC17B687CCC4784B1C87 /* Frameworks */,
 				7606F28F0FF9AFDF1530ACBC1DAD51F1 /* Resources */,
 			);
@@ -513,6 +531,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		14A4DD495848587CA5B6BBD65B7E56A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				189261D4BE14019DC3F6E2594467A7D6 /* Constants.swift in Sources */,
+				DF100A9E7211A30BE2F2FD961B5CF8B5 /* Date+Extension.swift in Sources */,
+				CFB582669FDCD59B44AA61EDC729B6AE /* DeviceUtils.swift in Sources */,
+				1523568C9CF15ABFDA43B4B6581CCE17 /* ImagesHelper.swift in Sources */,
+				7A6B1EE2A48707C17C6AAFD722488B52 /* MessageConfiguration.swift in Sources */,
+				9C58291B3C4C06BFBD723146C43A3415 /* MessageImageTableViewCell.swift in Sources */,
+				DC4473725CAEB9DC6CC51CF3B933BE5C /* MessageServices.swift in Sources */,
+				D80A1BE4CC280087CB3D4FC7AD327EA7 /* MessageTextTableViewCell.swift in Sources */,
+				EC5392A288A66E07B0AB15A045E850AA /* MessageTextViewController.swift in Sources */,
+				7CB326BF60D1EC35772AAA378C2AF457 /* MessageViewController+Extension.swift in Sources */,
+				D3294E314684243C2F8C64F56FBEBE74 /* MugiMessage.swift in Sources */,
+				0C8042ECE84B2B99232BEA88F859D400 /* RashMessage-dummy.m in Sources */,
+				8E305F8CB4134221B7E99614D7CDFD93 /* readme.me in Sources */,
+				8F86EC26F8860CD34617BE1F8F65FF9E /* UIColor+Hex.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		202B9B69B18347FD804AF043408710F5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -526,24 +565,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				62CC58B9D6C6F5849136F98138738EB1 /* Pods-RashMessage_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5D34B54AF60565BFC203FF3E29B30962 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BDC9BD5D17A9C149DCDB299F216428C1 /* Date+Extension.swift in Sources */,
-				584B193400171335B165449B5D6044AA /* ImagesHelper.swift in Sources */,
-				CA037B976C0146D4DDC3B177DDFADD1F /* MessageConfiguration.swift in Sources */,
-				AA471A7328702E8C783581E195CBE6DE /* MessageImageTableViewCell.swift in Sources */,
-				29F970967DB0E28CC1DDE305247316D0 /* MessageServices.swift in Sources */,
-				4A37912C49E3441634E8D02F6ECFE4E0 /* MessageTextTableViewCell.swift in Sources */,
-				159D05E9EFAB0EA64CEF765C8F37472A /* MessageTextViewController.swift in Sources */,
-				217C7943213408C698D5DFED07BD7614 /* MessageViewController+Extension.swift in Sources */,
-				47F9E71B39EC20340F9CDDBF1D2777A7 /* MugiMessage.swift in Sources */,
-				D4C92958D6CA7AE3336A8877672C7464 /* RashMessage-dummy.m in Sources */,
-				4429CB9E3B75DA5CBC3AF4A41DF4F27B /* readme.me in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,7 +736,7 @@
 		};
 		A474FBE5D3C42C4E6DF731CB796C0E8E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 646ABEBC36B83FA19B97E359A986F545 /* RashMessage.xcconfig */;
+			baseConfigurationReference = 7D4D5085139C0A7C1FF43DC32528628A /* RashMessage.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -841,7 +862,7 @@
 		};
 		CD2E79C9E2D35B360CFC15DB852D2196 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 646ABEBC36B83FA19B97E359A986F545 /* RashMessage.xcconfig */;
+			baseConfigurationReference = 7D4D5085139C0A7C1FF43DC32528628A /* RashMessage.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RashMessage";
@@ -857,7 +878,7 @@
 		};
 		D0A8AB121F94D061C24C2BA68E25C77E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 646ABEBC36B83FA19B97E359A986F545 /* RashMessage.xcconfig */;
+			baseConfigurationReference = 7D4D5085139C0A7C1FF43DC32528628A /* RashMessage.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -929,7 +950,7 @@
 		};
 		DE20146ADD6DAA12566767A28D09D41D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 646ABEBC36B83FA19B97E359A986F545 /* RashMessage.xcconfig */;
+			baseConfigurationReference = 7D4D5085139C0A7C1FF43DC32528628A /* RashMessage.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RashMessage";

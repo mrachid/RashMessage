@@ -58,10 +58,12 @@ public struct Sender {
 
     public let id: Int
     public let displayName: String
+    public let avatar: UIImage
 
-    public init(id: Int, displayName: String) {
+    public init(id: Int, displayName: String, avatar: UIImage) {
         self.id = id
         self.displayName = displayName
+        self.avatar = avatar
     }
 }
 
