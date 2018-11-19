@@ -54,7 +54,7 @@ extension MessageViewController {
             case .photo(let media):
                 let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier.messageImageCell.rawValue, for: indexPath) as! MessageImageTableViewCell
                 cell.messageImageView.image = media.image
-                cell.configure(valueBottomConstant: -27)
+                cell.configure(valueBottomConstant: -25)
                 cell.config = config
                 cell.message = message
                 return cell

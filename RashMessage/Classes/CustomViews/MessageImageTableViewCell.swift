@@ -99,7 +99,7 @@ class MessageImageTableViewCell: UITableViewCell {
         let constraint = [
             
             //ImageView constraints
-            messageImageView.topAnchor.constraint(equalTo: topAnchor),
+            messageImageView.topAnchor.constraint(equalTo: topAnchor, constant: 6),
             messageImageView.widthAnchor.constraint(lessThanOrEqualToConstant: 250),
             messageImageView.heightAnchor.constraint(lessThanOrEqualToConstant: 320),
             
@@ -113,8 +113,8 @@ class MessageImageTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate(constraint)
         
         //Trailing and leading constraint
-        leadingConstraintMessageImageView = messageImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 13)
-        trailingConstraintMessageImageView = messageImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -13)
+        leadingConstraintMessageImageView = messageImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5)
+        trailingConstraintMessageImageView = messageImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5)
         trailingConstraintMessageDateLabel = messageDateLabel.trailingAnchor.constraint(equalTo: messageImageView.trailingAnchor)
         leadingConstraintMessageDateLabel = messageDateLabel.trailingAnchor.constraint(equalTo: messageImageView.trailingAnchor)
         

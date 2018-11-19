@@ -27,7 +27,7 @@ public struct MessageConfiguration {
     
     public var messageBackgroundColorIsComming: UIColor = UIColor(white: 0.95, alpha: 1)
     public var messageBorderColorIsComming: UIColor = .clear
-    public var messageTextColorIsComming: UIColor = .black//.darkGray
+    public var messageTextColorIsComming: UIColor = .black
     
     public var messageBackgroundColorIsNotComming: UIColor = Constants.Colors.mugiBlueColor//UIColor(red: 221/255, green: 94/255, blue: 100/255, alpha: 1)
     public var messageBorderColorIsNotComming: UIColor = .clear

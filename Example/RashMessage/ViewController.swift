@@ -54,13 +54,28 @@ class ViewController: MessageViewController {
             MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud", avatar: UIImage(named: "SJ")!), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
             MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud", avatar: UIImage(named: "SJ")!), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
             MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud", avatar: UIImage(named: "SJ")!), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            
+            MugiMessage(image: UIImage(named: "TC")! , sender: Sender(id: 1, displayName: "Mahmoud", avatar: UIImage(named: "TC")!), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            
+            MugiMessage(image: UIImage(named: "ludovico_einaudi")! , sender: Sender(id: 1, displayName: "Mahmoud", avatar: UIImage(named: "SJ")!), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            
+            MugiMessage(image: UIImage(named: "SJ")! , sender: Sender(id: 1, displayName: "Mahmoud", avatar: UIImage(named: "TC")!), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            
+            MugiMessage(image: UIImage(named: "ludovico_einaudi")! , sender: Sender(id: 1, displayName: "Mahmoud", avatar: UIImage(named: "SJ")!), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            
             MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud", avatar: UIImage(named: "SJ")!), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
             MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud", avatar: UIImage(named: "SJ")!), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
             MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud", avatar: UIImage(named: "SJ")!), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
             MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud", avatar: UIImage(named: "SJ")!), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
             MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud", avatar: UIImage(named: "SJ")!), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(image: UIImage(named: "TC")! , sender: Sender(id: 1, displayName: "Mahmoud", avatar: UIImage(named: "ludovico_einaudi")!), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            
+            MugiMessage(image: UIImage(named: "SJ")! , sender: Sender(id: 1, displayName: "Mahmoud", avatar: UIImage(named: "SJ")!), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(image: UIImage(named: "ludovico_einaudi")! , sender: Sender(id: 1, displayName: "Mahmoud", avatar: UIImage(named: "ludovico_einaudi")!), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            
             MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud", avatar: UIImage(named: "SJ")!), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
             MugiMessage(text: simpleDataText[(Int(arc4random_uniform(UInt32(11))))], sender: Sender(id: 1, displayName: "Mahmoud", avatar: UIImage(named: "SJ")!), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
+            MugiMessage(image: UIImage(named: "ludovico_einaudi")! , sender: Sender(id: 1, displayName: "Mahmoud", avatar: UIImage(named: "SJ")!), messageId: 1, createdAt: Date(), isIncomming: randomBool()),
             
             
             
