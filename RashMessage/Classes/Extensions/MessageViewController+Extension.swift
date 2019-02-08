@@ -42,8 +42,9 @@ extension MessageViewController {
             label.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
             return containerView
         }
-        
-        return nil
+        let view = UIView()
+        view.backgroundColor = .clear
+        return view
     }
     
     
@@ -51,56 +52,45 @@ extension MessageViewController {
         
         let message = mugiChatMessages[indexPath.section][indexPath.row]
         switch message.kind {
-            case .photo(let media):
-                let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier.messageImageCell.rawValue, for: indexPath) as! MessageImageTableViewCell
-                cell.messageImageView.image = media.image
-                cell.configure(valueBottomConstant: -25)
-                cell.config = config
-                cell.message = message
-                return cell
+        case .text(_):
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier.messageTextCell.rawValue, for: indexPath) as! MessageTextTableViewCell
+            var nextMessage: MugiMessage?
+            cell.config = config
+            if indexPath.row < mugiChatMessages[indexPath.section].count - 1 {
+                nextMessage = mugiChatMessages[indexPath.section][indexPath.row + 1]
+            } else {
+                nextMessage = nil
+                cell.displayAvatar = mugiChatMessages[indexPath.section][indexPath.row].isIncomming
+                cell.configure(valueBottomConstant: -35)
+            }
             
-            case .text(_):
-                let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier.messageTextCell.rawValue, for: indexPath) as! MessageTextTableViewCell
-                var nextMessage: MugiMessage?
-                cell.config = config
-
-
-                if indexPath.row < mugiChatMessages[indexPath.section].count - 1 {
-                    nextMessage = mugiChatMessages[indexPath.section][indexPath.row + 1]
+            cell.displayAvatar = MugiMessageServices.displayAvatarByMessage(firstMessage: mugiChatMessages[indexPath.section][indexPath.row], secondeMessage: nextMessage)
+            if nextMessage != nil {
+                if message.isIncomming == nextMessage!.isIncomming {
+                    cell.configure(valueBottomConstant: -16)
                 } else {
-                    nextMessage = nil
-                    cell.displayAvatar = mugiChatMessages[indexPath.section][indexPath.row].isIncomming
-                    cell.configure(valueBottomConstant: -35)
+                    cell.configure(valueBottomConstant: -30)
                 }
-                
-                cell.displayAvatar = MugiMessageServices.displayAvatarByMessage(firstMessage: mugiChatMessages[indexPath.section][indexPath.row], secondeMessage: nextMessage)
-                if nextMessage != nil {
-                    if message.isIncomming == nextMessage!.isIncomming {
-                        cell.configure(valueBottomConstant: -16)
-                    } else {
-                        cell.configure(valueBottomConstant: -30)
-                    }
-                }
-                
-                cell.message = message
-                return cell
-        
-            case .doc(_): return UITableViewCell()
+            }
+            
+            cell.message = message
+            return cell
+            
+        case .doc(_):
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier.messageDocCell.rawValue, for: indexPath) as! MessageDocumentTableViewCell
+            cell.displayAvatar = config?.displayAvatar
+            cell.configure(valueBottomConstant: -20)
+            cell.config = config
+            cell.message = message
+            return cell
+        default: return UITableViewCell()
         }
-    }
+    } 
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
-    
-    
 }
-
-public protocol MessageDelegate {
-    func didSuccessAddMessage()
-    //    func didFailAddMessage()
-}
-
 
 class DateHeaderLabel: UILabel {
     

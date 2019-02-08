@@ -46,7 +46,7 @@ class MessageImageTableViewCell: UITableViewCell {
         }
     }
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         //Init cell with default configuration
@@ -113,6 +113,7 @@ class MessageImageTableViewCell: UITableViewCell {
         NSLayoutConstraint.activate(constraint)
         
         //Trailing and leading constraint
+        
         leadingConstraintMessageImageView = messageImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 5)
         trailingConstraintMessageImageView = messageImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -5)
         trailingConstraintMessageDateLabel = messageDateLabel.trailingAnchor.constraint(equalTo: messageImageView.trailingAnchor)

@@ -32,7 +32,7 @@ private struct MugiMediaItem: MediaItem {
     var url: URL?
     var image: UIImage?
 
-    init(image: UIImage) {
+    init(image: UIImage?) {
         self.image = image
     }
 }
@@ -48,7 +48,7 @@ private struct MugiDocItem: DocItem {
     var url: URL?
     var name: String?
     
-    init(url: URL, name: String) {
+    init(url: URL?, name: String) {
         self.url = url
         self.name = name
     }
@@ -58,9 +58,9 @@ public struct Sender {
 
     public let id: Int
     public let displayName: String
-    public let avatar: UIImage
+    public let avatar: UIImage?
 
-    public init(id: Int, displayName: String, avatar: UIImage) {
+    public init(id: Int, displayName: String, avatar: UIImage?) {
         self.id = id
         self.displayName = displayName
         self.avatar = avatar
@@ -92,12 +92,12 @@ public class MugiMessage {
         self.init(kind: .text(text), sender: sender, messageId: messageId, createdAt: createdAt, isIncomming: isIncomming)
     }
 
-    public convenience init(image: UIImage, sender: Sender, messageId: Int, createdAt: Date, isIncomming: Bool) {
+    public convenience init(image: UIImage?, sender: Sender, messageId: Int, createdAt: Date, isIncomming: Bool) {
         let mediaItem = MugiMediaItem(image: image)
         self.init(kind: .photo(mediaItem), sender: sender, messageId: messageId, createdAt: createdAt, isIncomming: isIncomming)
     }
 
-    public convenience init(url: URL, name: String, sender: Sender, messageId: Int, createdAt: Date, isIncomming: Bool) {
+    public convenience init(url: URL?, name: String, sender: Sender, messageId: Int, createdAt: Date, isIncomming: Bool) {
         let docItem = MugiDocItem(url: url, name: name)
         self.init(kind: .doc(docItem), sender: sender, messageId: messageId, createdAt: createdAt, isIncomming: isIncomming)
     }

@@ -8,14 +8,22 @@
 import UIKit
 
 
+protocol MugiMessageInputBarDelegate {
+    func sendNewMessageText(text: String)
+    func actionMessageButton()
+}
+
 enum cellIdentifier: String {
     case messageTextCell = "MessageTextCell"
     case messageImageCell = "MessageImageCell"
+    case messageDocCell = "MessageDocCell"
 }
 
-open class MessageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextViewDelegate {
+class MessageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextViewDelegate {
     
-    private let messageTableView: UITableView = {
+    var mugiInputDelegate: MugiMessageInputBarDelegate?
+    
+    let messageTableView: UITableView = {
         let messageTableView = UITableView()
         messageTableView.estimatedRowHeight = 160
         messageTableView.estimatedSectionHeaderHeight = 100
@@ -49,14 +57,16 @@ open class MessageViewController: UIViewController, UITableViewDelegate, UITable
         view.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         view.imageView?.contentMode = .scaleAspectFit
         view.imageEdgeInsets = UIEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
+        view.addTarget(self, action: #selector(sendMessage), for: .touchUpInside)
         return view
     }()
     
     private let sendItemButton: UIButton = {
         let view = UIButton()
-        view.setImage(ImagesHelper.loadImage(name: "add"), for: .normal)
+        view.setImage(UIImage(named: "add"), for: .normal)
         view.imageView?.contentMode = .scaleAspectFit
         view.imageEdgeInsets = UIEdgeInsets(top: 9, left: 9, bottom: 9, right: 9)
+        view.addTarget(self, action: #selector(displayMultiAction), for: .touchUpInside)
         return view
     }()
     
@@ -68,7 +78,9 @@ open class MessageViewController: UIViewController, UITableViewDelegate, UITable
     
     public var mugiMessages = [MugiMessage]() {
         didSet {
-            mugiChatMessages = MugiMessageServices.parseMessageIntoSection(mugiMessages: mugiMessages)
+            DispatchQueue.global(qos: .background).async {
+                self.mugiChatMessages = MugiMessageServices.parseMessageIntoSection(mugiMessages: self.mugiMessages)
+            }
         }
     }
     
@@ -80,15 +92,19 @@ open class MessageViewController: UIViewController, UITableViewDelegate, UITable
     
     override open func viewDidLoad() {
         super.viewDidLoad()
-        setupDefault()
-        setupRegister()
-        setupSubviews()
-        setupConstraints()
-        setupDelegates()
-        if config == nil {
-            config = MessageConfiguration()
+        
+        DispatchQueue.main.async {
+            self.setupDefault()
+            self.setupRegister()
+            self.setupSubviews()
+            self.setupConstraints()
+            self.setupDelegates()
+            if self.config == nil {
+                self.config = MessageConfiguration()
+            }
+            self.messageTableView.separatorStyle = .none
         }
-        messageTableView.separatorStyle = .none
+        
     }
     
     override open func didReceiveMemoryWarning() {
@@ -96,7 +112,8 @@ open class MessageViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     private func setupDefault() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         view.backgroundColor = .white
         
         textViewDidChange(messageTextView)
@@ -105,6 +122,7 @@ open class MessageViewController: UIViewController, UITableViewDelegate, UITable
     private func setupRegister() {
         messageTableView.register(MessageTextTableViewCell.self, forCellReuseIdentifier: cellIdentifier.messageTextCell.rawValue)
         messageTableView.register(MessageImageTableViewCell.self, forCellReuseIdentifier: cellIdentifier.messageImageCell.rawValue)
+        messageTableView.register(MessageDocumentTableViewCell.self, forCellReuseIdentifier: cellIdentifier.messageDocCell.rawValue)
     }
     
     private func setupSubviews() {
@@ -199,7 +217,8 @@ open class MessageViewController: UIViewController, UITableViewDelegate, UITable
     
     
     @objc public func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            messageTextView.text = ""
             messageTextViewBottomContraint.constant = -keyboardSize.height - 15
             UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
                 self.view.layoutIfNeeded()
@@ -207,9 +226,15 @@ open class MessageViewController: UIViewController, UITableViewDelegate, UITable
                 let nbrSection = self.mugiChatMessages.count - 1
                 let lastMessage = self.mugiChatMessages[nbrSection].count - 1
                 let index = IndexPath(item: lastMessage, section: nbrSection)
-                self.messageTableView.scrollToRow(at: index, at: .bottom, animated: true)
+                if lastMessage >= 0 {
+                    self.messageTableView.scrollToRow(at: index, at: .bottom, animated: true)
+                }
             })
         }
+    }
+    
+    @objc public func keyboardWillHide(notification: NSNotification) {
+        messageTextViewBottomContraint.constant = -30
     }
     
     public func textViewDidChange(_ textView: UITextView) {
@@ -226,25 +251,17 @@ open class MessageViewController: UIViewController, UITableViewDelegate, UITable
             }
         }
     }
+}
+
+extension MessageViewController {
     
-    public func newMessage(message: MugiMessage) {
-        
-        let lastIndexGroup = mugiChatMessages.count - 1
-        
-        if DateHelper.dateShortFormater.string(from: (mugiChatMessages[lastIndexGroup].first?.createdAt)!) == DateHelper.dateShortFormater.string(from: message.createdAt) {
-            mugiChatMessages[lastIndexGroup].append(message)
-        } else {
-            mugiChatMessages.append([message])
-        }
-        
-        UIView.animate(withDuration: 0, delay: 0, options: .curveEaseOut, animations: {
-            self.messageTableView.reloadData()
-            self.view.layoutIfNeeded()
-        }, completion: {(complete) in
-            let nbrSection = self.mugiChatMessages.count - 1
-            let lastMessage = self.mugiChatMessages[nbrSection].count - 1
-            let index = IndexPath(item: lastMessage, section: nbrSection)
-            self.messageTableView.scrollToRow(at: index, at: .bottom, animated: true)
-        })
+    @objc func sendMessage() {
+        mugiInputDelegate?.sendNewMessageText(text: messageTextView.text)
+        messageTextView.text = ""
+        textViewDidChange(messageTextView)
+    }
+    
+    @objc func displayMultiAction() {
+        mugiInputDelegate?.actionMessageButton()
     }
 }

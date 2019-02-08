@@ -42,7 +42,7 @@ class MessageTextTableViewCell: UITableViewCell {
         textview.isEditable = false
         textview.isSelectable = true
         textview.dataDetectorTypes = .all        
-        textview.linkTextAttributes = [ NSAttributedStringKey.underlineStyle.rawValue: NSUnderlineStyle.styleSingle.rawValue ]
+//        textview.linkTextAttributes = [ NSAttributedString.Key.underlineStyle.rawValue: NSUnderlineStyle.single.rawValue ]
         return textview
     }()
     
@@ -85,7 +85,7 @@ class MessageTextTableViewCell: UITableViewCell {
         }
     }
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         //Init cell with default configuration
